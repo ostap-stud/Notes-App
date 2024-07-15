@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NotesApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_new_note">Add new note</string>
+    <string name="no_notes_yet">No notes yet</string>
+    <string name="title">Title</string>
+    <string name="note">Note</string>
+    <string name="save_note">Save note</string>
+    <string name="add_image">Add image</string>
+    <string name="change_image">Change image</string>
+    <string name="delete_image">Delete image</string>
+    <string name="no_title">No title</string>
+    <string name="no_content">No content</string>
+</resources>

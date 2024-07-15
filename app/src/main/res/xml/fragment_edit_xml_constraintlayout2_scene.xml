@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start">
+       <KeyFrameSet>
+       </KeyFrameSet>
+        <OnClick motion:targetId="@+id/fbAddImage" />
+    </Transition>
+
+    <Transition
+        android:id="@+id/fab_delete_transition"
+        motion:constraintSetStart="@+id/end"
+        motion:constraintSetEnd="@+id/start" >
+<!-- This is disabled cause of already existing onClickListener in EditFragment -->
+<!--<OnClick motion:targetId="@+id/fbDelete" />-->
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/layoutAddImage"
+            motion:layout_constraintEnd_toEndOf="@+id/textInputLayoutTitle"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:visibility="gone"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/textInputLayoutTitle"
+            android:layout_marginTop="16dp" />
+        <Constraint
+            android:id="@+id/fbAddImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="@+id/fbSave"
+            motion:layout_constraintBottom_toTopOf="@+id/fbSave"
+            android:layout_marginBottom="16dp" />
+        <Constraint
+            android:id="@+id/fbDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="@+id/fbSave"
+            motion:layout_constraintBottom_toTopOf="@+id/fbSave"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="120dp" />
+        <Constraint
+            android:layout_height="0dp"
+            motion:layout_constraintStart_toStartOf="@+id/textInputLayoutTitle"
+            android:layout_marginTop="16dp"
+            motion:layout_constraintEnd_toEndOf="@+id/textInputLayoutTitle"
+            android:layout_width="0dp"
+            motion:layout_constraintTop_toBottomOf="@+id/textInputLayoutTitle"
+            android:id="@+id/textInputLayoutContent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="@+id/textInputLayoutContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/textInputLayoutContent"
+            android:id="@+id/fbSave"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/layoutAddImage"
+            motion:layout_constraintEnd_toEndOf="@+id/textInputLayoutTitle"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:visibility="visible"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="@+id/textInputLayoutTitle"
+            android:layout_marginTop="16dp" />
+        <Constraint
+            android:id="@+id/fbAddImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="@+id/fbSave"
+            motion:layout_constraintBottom_toTopOf="@+id/fbSave"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="120dp" />
+        <Constraint
+            android:id="@+id/fbDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toTopOf="@+id/fbSave"
+            motion:layout_constraintStart_toStartOf="@+id/fbSave"
+            android:layout_marginBottom="16dp" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="@+id/textInputLayoutTitle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            motion:layout_constraintTop_toBottomOf="@+id/textInputLayoutTitle"
+            motion:layout_constraintStart_toStartOf="@+id/textInputLayoutTitle"
+            android:layout_marginTop="16dp"
+            android:id="@+id/textInputLayoutContent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintGuide_begin="477dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/guideline2" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="@+id/textInputLayoutContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="@+id/textInputLayoutContent"
+            android:id="@+id/fbSave"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp" />
+    </ConstraintSet>
+
+</MotionScene>
